@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/600aa3e75c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone| Messages</title>
+    <link rel="Facebook icon" type="image/x-icon" href="Pictures/facebook.svg" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Clone</h1>
+        <nav>
+            <a href="feed.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="friends.html">Friends</a>
+            <a href="messages.html">Messages</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Messages | Messenger</h2>
+                <!-- Messages content goes here -->
+        <main>
+            <i class="fa-brands fa-facebook-messenger fa-beatstyle" style= "color:#9b1c8a;"></i>
+            
+            <!-- Messages -->
+            <div id="messagesContainer">
+                <div class="message">
+                    <p><strong>John Smith:</strong> Hey, how are you?</p>
+                </div>
+                <div class="message">
+                    <p><strong>You:</strong> I'm good, thanks!</p>
+                </div>
+            </div>
+            <!-- New message form -->
+            <form id="newMessageForm">
+                <input type="text" id="messageContent" placeholder="Type a message" required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+        <script>
+            document.getElementById('newMessageForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const messageContent = document.getElementById('messageContent').value;
+                if (messageContent.trim() === '') {
+                    alert('Message content cannot be empty');
+                    return;
+                }
+    
+                const messagesContainer = document.getElementById('messagesContainer');
+                const messageElement = document.createElement('div');
+                messageElement.className = 'message';
+                messageElement.innerHTML = `<p><strong>You:</strong> ${messageContent}</p>`;
+    
+                messagesContainer.appendChild(messageElement);
+                document.getElementById('messageContent').value = '';
+            });
+        </script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Clone| Home</title>
+    <link rel="Facebook icon" type="image/x-icon" href="icons/facebook.svg" />
+    <script src="https://kit.fontawesome.com/600aa3e75c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Clone</h1>
+        <div id="account-icon" onclick="toggleLoginForm()">
+            <img src="Pictures/user.svg" alt="Account Icon" id="account-img">
+        </div>
+    </header>
+    <main>
+        <section id="signup-login">
+            <div class="form-container" id="signup-form-container">
+                <h2>Sign Up</h2>
+                <form id="signup-form" onsubmit="handleSignUp(event)">
+                    <label for="signup-name">Name:</label>
+                    <input type="text" id="signup-name" name="name" required>
+                    
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container" id="login-form-container"  style="display:none">
+                <h2>Log In</h2>
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <label for="login-name">Name:</label>
+                    <input type="text" id="login-name" name="name" required>
+
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                    
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

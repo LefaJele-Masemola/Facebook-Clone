@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Clone| Profile</title>
+    <link rel="Facebook icon" type="image/x-icon" href="Pictures/facebook.svg" />
+    <script src="https://kit.fontawesome.com/600aa3e75c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Clone</h1>
+        <nav>
+            <a href="feed.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="friends.html">Friends</a>
+            <a href="messages.html">Messages</a>
+        </nav>
+
+        <div id="profile-info">
+            <!-- Profile picture and name displayed here -->
+            <img src="Pictures/8c1d2730-a2bc-49a0-b5eb-1abcbda204b1.JPG" alt="Profile Picture" id="profile-picture">
+            <span id="profile-name">Lefa Jele-Masemola</span>
+        </div>
+    </header>
+    <main>
+        <section id="profile-section">
+            <h1>Profile Information</h1>
+            <div id="profile-details">
+                <p><strong>Email:</strong> lefa.jele-masemola@example.com</p>
+                <p><strong>Location:</strong> Johannesburg, South Africa</p>
+                <p><strong>Education:</strong> University of Pretoria</p>
+                <p><strong>Work:</strong> Facebook Clone</p>
+                <p><strong>Interests:</strong> Web Development, Design, Music</p>
+                <p><strong>Bio:</strong> I enjoy Music suckers!</p>
+                <!-- Add more profile details here -->
+            </div>
+        </section>
+
+        <section id="posts">
+
+         <!-- New post form -->
+         <form id="newProfilePostForm">
+            <textarea id="profilePostContent" placeholder="What's on your mind?"></textarea><br>
+            <button type="submit">Post</button>
+        </form>
+
+             <!-- User posts -->
+             <div class="post">
+                <h3>Lefa Jele-Masemola</h3>
+                <p>This is a sample post on the profile page.</p>
+                <img class="pic" src="Pictures/food.jpg">
+            </div>
+           
+        <!-- Posts container -->
+        <div id="profilePostsContainer"></div>
+          </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

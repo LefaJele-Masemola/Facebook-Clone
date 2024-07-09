@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Clone|Friends</title>
+    <link rel="Facebook icon" type="image/x-icon" href="Pictures/facebook.svg" />
+    <script src="https://kit.fontawesome.com/600aa3e75c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Clone</h1>
+        <nav>
+            <a href="feed.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="friends.html">Friends</a>
+            <a href="messages.html">Messages</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Friends</h2>
+        <!-- Friends list content goes here -->
+        <main>
+            <h2>Friends Page</h2>
+            <p>This is the user's friends page.</p>
+            <!-- Friends list -->
+            <ul id="friendsList">
+                <li>John Smith <button onclick="removeFriend(this)">Remove</button></li>
+                <li>Jane Doe <button onclick="removeFriend(this)">Remove</button></li>
+                <li>Michael Johnson <button onclick="removeFriend(this)">Remove</button></li>
+            </ul>
+            <!-- Add new friend form -->
+            <form id="newFriendForm">
+                <input type="text" id="friendName" placeholder="Enter friend's name" required>
+                <button type="submit">Add Friend</button>
+            </form>
+        </main>
+        <script>
+            function removeFriend(button) {
+                const listItem = button.parentElement;
+                listItem.remove();
+            }
+    
+            document.getElementById('newFriendForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const friendName = document.getElementById('friendName').value;
+                if (friendName.trim() === '') {
+                    alert('Friend name cannot be empty');
+                    return;
+                }
+    
+                const friendsList = document.getElementById('friendsList');
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `${friendName} <button onclick="removeFriend(this)">Remove</button>`;
+    
+                friendsList.appendChild(listItem);
+                document.getElementById('friendName').value = '';
+            });
+        </script>
+    </main>
+</body>
+</html>

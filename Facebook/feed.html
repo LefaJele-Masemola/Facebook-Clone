@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Clone|Feed</title>
+    <link rel="Facebook icon" type="image/x-icon" href="Pictures/facebook.svg" />
+    <script src="https://kit.fontawesome.com/600aa3e75c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Clone</h1>
+        
+        <nav>
+            <a href="feed.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="friends.html">Friends</a>
+            <a href="messages.html">Messages</a>
+        </nav>
+        
+        <div id="profile-info">
+            <!-- Profile picture and name displayed here -->
+            <img src="Pictures/8c1d2730-a2bc-49a0-b5eb-1abcbda204b1.JPG" alt="Profile Picture" id="profile-picture">
+            <span id="profile-name">Lefa Jele-Masemola</span>
+        </div>
+        <!-- Feed Icon -->
+    <div id="feed-icon" style="display: none;">
+        <p id="feed-username"></p>
+    </div>
+    </header>
+    <main>
+        <section id="stories">
+            <h2>Stories</h2>
+            <div id="story-list">
+                <!-- Example of adding a story with an image -->
+                <div class="story">
+                    <img src="Pictures/8c1d2730-a2bc-49a0-b5eb-1abcbda204b1.JPG" alt="Profile Picture">
+                    <div class="story-info">
+                        <h3>Lefa Jele-Masemola</h3>
+                        <p>This is my story!</p>
+
+                        <video id="myVideo" width="230" height="300" controls>
+                            <source src="Pictures/video1.mp4 " type="video/mp4">
+                        </video>
+                    
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="Pictures/user2.jpg" alt="Profile Picture">
+                    <div class="story-info">
+                        <h3>Anne Lawn</h3>
+                        <p>This is my story!</p>
+
+                        <img src="Pictures/post1.jpg" class="storyImage" width="150" height="380" >
+                            
+                    
+                    </div>
+                </div>
+                <!-- Add more stories similarly -->
+            </div>
+        </section>
+        <section id="posts">
+            <h2>Posts</h2>
+            <!-- New post form -->
+        <form id="newPostForm">
+            <textarea id="postContent" placeholder="What's on your mind?"></textarea><br>
+            <button type="submit">Post</button>
+        </form>
+
+        <!-- Posts container -->
+        <div id="postsContainer"></div>
+            <div id="post-list">
+                <!-- Example of adding a post with an image -->
+                <div class="post">
+                    <img src="Pictures/image3.jpeg" alt="Profile Picture">
+                    <div class="post-info">
+                        <h3>Jane Masanabo</h3>
+                        <p>Loving the new Facebook clone website.</p>
+                        <img src= "Pictures/food.jpg" class="pic" height="70" width="160">
+                    </div>
+                </div>
+                <!-- Add more posts similarly -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
